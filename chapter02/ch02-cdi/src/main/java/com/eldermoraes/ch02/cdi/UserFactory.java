@@ -9,7 +9,12 @@ import javax.enterprise.inject.Produces;
  */
 public class UserFactory implements Serializable{
 
-    @Produces
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 3354412522676481413L;
+
+	@Produces
     public User getUser() {
         return new User("Elder Moraes", "elder@eldermoraes.com");
     }

@@ -19,7 +19,12 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "ProfileServlet", urlPatterns = {"/ProfileServlet"})
 public class ProfileServlet extends HttpServlet {
 
-    protected void doRequest(HttpServletRequest request, HttpServletResponse response)
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -8426086647397475418L;
+
+	protected void doRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.getRequestDispatcher("/profile.jsp").forward(request, response);
         System.out.println("Redirected to profile.jsp");

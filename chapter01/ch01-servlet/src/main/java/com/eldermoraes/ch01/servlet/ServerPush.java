@@ -16,7 +16,12 @@ import java.io.PrintWriter;
 @WebServlet(name = "ServerPush", urlPatterns = {"/ServerPush"})
 public class ServerPush extends HttpServlet {
 
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 5455337802719929082L;
+
+	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         PushBuilder pb = request.newPushBuilder();

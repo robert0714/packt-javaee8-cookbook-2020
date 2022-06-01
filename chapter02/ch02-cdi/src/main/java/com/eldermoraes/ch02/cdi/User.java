@@ -8,7 +8,11 @@ import java.io.Serializable;
  */
 public class User implements Serializable {
 
-    private String name;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -3242698406850186812L;
+	private String name;
     private String email;
 
     public String getName() {

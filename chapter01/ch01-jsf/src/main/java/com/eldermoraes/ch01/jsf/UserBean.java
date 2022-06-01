@@ -11,7 +11,11 @@ import javax.inject.Named;
 @RequestScoped
 public class UserBean implements Serializable {
     
-    private User user;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -8262784297392770477L;
+	private User user;
     
     @PostConstruct
     public void init(){

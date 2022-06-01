@@ -22,7 +22,11 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "UserServlet", urlPatterns = {"/UserServlet"})
 public class UserServlet extends HttpServlet {
     
-    private User user;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 6747029591115903265L;
+	private User user;
     
     @PostConstruct
     public void instantiateUser(){
