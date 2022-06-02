@@ -125,3 +125,4 @@ target
 
 target/
 chapter02/ch02-jta/target/
+.LCKpom.xml~

@@ -32,9 +32,9 @@ public class Ch02JpaTest {
     @Before
     public void setUp() throws NamingException {
         Properties p = new Properties();
-        p.put("userDb", "new://Resource?type=DataSource");
-        p.put("userDb.JdbcDriver", "org.hsqldb.jdbcDriver");
-        p.put("userDb.JdbcUrl", "jdbc:hsqldb:mem:userdatabase");
+        p.put("app/userDb", "new://Resource?type=DataSource");
+        p.put("app/userDb.JdbcDriver", "org.hsqldb.jdbcDriver");
+        p.put("app/userDb.JdbcUrl", "jdbc:hsqldb:mem:userdatabase");
 
         ejbContainer = EJBContainer.createEJBContainer(p);
         ejbContainer.getContext().bind("inject", this);

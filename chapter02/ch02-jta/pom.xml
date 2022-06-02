@@ -12,7 +12,8 @@
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jakartaee-api.version>8.0.0</jakartaee-api.version>        
+        <jakartaee-api.version>8.0.0</jakartaee-api.version>
+<!--         <openejb.version>8.0.11</openejb.version>       -->
     </properties>
     
     <dependencies>
@@ -21,6 +22,17 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>4.3.11.Final</version> 
         </dependency>
+<!--       we use  persistence-2.0 , not 2.1 -->
+<!-- 		<dependency> -->
+<!-- 		    <groupId>org.hibernate</groupId> -->
+<!-- 		    <artifactId>hibernate-entitymanager</artifactId> -->
+<!-- 		    <version>5.6.9.Final</version> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 		    <groupId>org.hibernate.orm</groupId> -->
+<!-- 		    <artifactId>hibernate-core</artifactId> -->
+<!-- 		    <version>6.0.2.Final</version> -->
+<!-- 		</dependency> -->        
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -35,22 +47,29 @@
         </dependency>
         <dependency>
             <groupId>jakarta.platform</groupId>
-<!--             <artifactId>jakarta.jakartaee-web-api</artifactId> -->
             <artifactId>jakarta.jakartaee-api</artifactId>
             <version>${jakartaee-api.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.apache.openejb</groupId>
+            <groupId>org.apache.tomee</groupId>
             <artifactId>openejb-core</artifactId>
-            <version>4.7.5</version>
+			<version>8.0.11</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-		    <groupId>org.apache.derby</groupId>
-		    <artifactId>derbyclient</artifactId>
-		    <version>10.15.2.0</version>
-		</dependency>
+<!-- https://tomee.apache.org/latest/examples/junit5-application-composer.html -->
+<!--         <dependency> -->
+<!-- 		  <groupId>org.apache.tomee</groupId> -->
+<!-- 		  <artifactId>openejb-junit5</artifactId> -->
+<!-- 		  <version>${openejb.version}</version> -->
+<!-- 		  <scope>test</scope> -->
+<!-- 		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 		    <groupId>org.junit.jupiter</groupId> -->
+<!-- 		    <artifactId>junit-jupiter-engine</artifactId> -->
+<!-- 		    <version>5.8.2</version> -->
+<!-- 		    <scope>test</scope> -->
+<!-- 		</dependency> -->
     </dependencies>
 
     <build>

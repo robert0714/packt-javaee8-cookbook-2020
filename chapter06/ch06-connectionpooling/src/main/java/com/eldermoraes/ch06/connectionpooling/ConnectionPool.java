@@ -14,7 +14,7 @@ public class ConnectionPool {
 
     public static Connection getConnection() throws SQLException, NamingException {
         InitialContext ctx = new InitialContext();
-        DataSource ds = (DataSource) ctx.lookup("jdbc/MysqlPool");
+        DataSource ds = (DataSource) ctx.lookup("app/userDb");
 
         return ds.getConnection();
     }

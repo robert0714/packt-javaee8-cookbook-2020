@@ -6,7 +6,7 @@
     <persistence-unit name="ch02-jta-pu" transaction-type="JTA">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         
-        <jta-data-source>userDb</jta-data-source>
+        <jta-data-source>app/userDb</jta-data-source>
         <non-jta-data-source>userDbNonJta</non-jta-data-source>
         
         <exclude-unlisted-classes>false</exclude-unlisted-classes>

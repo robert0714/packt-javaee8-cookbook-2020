@@ -1,4 +1,4 @@
-package com.eldermoraes.ch02.jta1;
+package com.eldermoraes.ch02.jpa;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,14 +19,14 @@ import static org.junit.Assert.*;
  *
  * @author eldermoraes
  */
-public class Ch02JtaTest {
+public class Ch02JpaTest4JUNIT4 {
     
     private EJBContainer ejbContainer;
     
     @EJB
     private UserBean userBean;
     
-    public Ch02JtaTest() {
+    public Ch02JpaTest4JUNIT4() {
     }
     
     @Before
@@ -46,7 +46,7 @@ public class Ch02JtaTest {
     }
     
     @Test
-    public void validTransaction() throws Exception{
+    public void persistData() throws Exception{
         User user  = new User(null, "Elder Moraes", "elder@eldermoraes.com");
         
         userBean.add(user);
