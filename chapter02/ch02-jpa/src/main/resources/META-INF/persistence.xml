@@ -4,7 +4,11 @@
             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
     
     <persistence-unit name="ch02-jpa-pu" transaction-type="JTA">
+<!--         If you are using Hibernate 4.3 or newer versions, then you need to use the org.hibernate.jpa.HibernatePersistenceProvider class name. -->
+<!--         If you are using Hibernate 4.2 or older versions, then you need to use the org.hibernate.ejb.HibernatePersistence class name instead. -->
+    
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
+<!--         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider> -->
         <jta-data-source>app/userDb</jta-data-source>
         
         <exclude-unlisted-classes>false</exclude-unlisted-classes>

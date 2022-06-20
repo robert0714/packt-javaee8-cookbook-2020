@@ -1,13 +1,11 @@
 # Preparation
 * [How to Install Derby Database in Windows 10](https://www.youtube.com/watch?v=sOSa1DCL6rw)
-
 ```shell
 PS C:\Users\1204003> ij
 ij version 10.14
 ij> connect 'jdbc:derby:mydb;create=true';
 ```
 You can find the derby.log in user's home directory.
-
 ```log
 ----------------------------------------------------------------
 Wed Jun 01 13:56:20 CST 2022:
@@ -30,7 +28,6 @@ database directory C:\Users\1204003\mydb
 https://db.apache.org/derby/papers/DerbyTut/ns_intro.html
 ## Start Network Server
 Start the Network server by executing the startNetworkServer.bat (Windows) or startNetworkServer (UNIX) script. This will start the Network Server up on port 1527 and echo a startup message:
-
 ```shell
 PS C:\Users\1204003> startNetworkServer.bat
 Wed Jun 01 14:05:48 CST 2022 : Security manager installed using the Basic server security policy.
@@ -49,7 +46,6 @@ Reference: https://blog.payara.fish/using-mysql-with-payara
 asadmin add-library /path/to/mysql-connector-java-bin.jar
 ```
 In Windows
-
 ```shell
 Microsoft Windows [Version 10.0.19044.1706]
 (c) Microsoft Corporation. All rights reserved.
